@@ -1,0 +1,6 @@
+{
+  "name": "NextCMS Shared Editor UI & Builder Prototypes",
+  "description": "A reusable editor design system (@nextcms/editor-ui) with tokens, compact primitives, shell, inspector, overlays, and dual prototypes for Page Builder and Dashboard Builder.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,100 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ==========================================================================
+   NextCMS Editor UI Design Tokens (--ne-*)
+   ========================================================================== */
+:root {
+  /* Light Theme */
+  --ne-bg: #F8FAFC;
+  --ne-surface: #FFFFFF;
+  --ne-surface-subtle: #F1F5F9;
+  --ne-surface-hover: #E2E8F0;
+  --ne-border: #E2E8F0;
+  --ne-border-strong: #CBD5E1;
+  --ne-text: #0F172A;
+  --ne-text-muted: #64748B;
+  --ne-text-subtle: #94A3B8;
+  --ne-primary: #2563EB;
+  --ne-primary-hover: #1D4ED8;
+  --ne-primary-soft: #DBEAFE;
+  --ne-primary-soft-hover: #BFDBFE;
+  --ne-success: #059669;
+  --ne-success-soft: #D1FAE5;
+  --ne-warning: #D97706;
+  --ne-warning-soft: #FEF3C7;
+  --ne-danger: #DC2626;
+  --ne-danger-soft: #FEE2E2;
+
+  /* Overlays */
+  --ne-select: var(--ne-primary);
+  --ne-hover: rgba(37, 99, 235, 0.4);
+  --ne-drop: var(--ne-primary);
+  --ne-locked: var(--ne-warning);
+  --ne-focus-ring: var(--ne-primary);
+
+  /* Geometry & Typography */
+  --ne-radius-sm: 4px;
+  --ne-radius-md: 6px;
+  --ne-radius-lg: 8px;
+  --ne-control-h: 28px;
+  --ne-row-h: 32px;
+}
+
+.dark {
+  /* Dark Theme */
+  --ne-bg: #0B1220;
+  --ne-surface: #111A2E;
+  --ne-surface-subtle: #192540;
+  --ne-surface-hover: #223254;
+  --ne-border: #24314D;
+  --ne-border-strong: #334468;
+  --ne-text: #E5EAF3;
+  --ne-text-muted: #94A3B8;
+  --ne-text-subtle: #64748B;
+  --ne-primary: #60A5FA;
+  --ne-primary-hover: #3B82F6;
+  --ne-primary-soft: #1E2A4A;
+  --ne-primary-soft-hover: #283966;
+  --ne-success: #34D399;
+  --ne-success-soft: #064E3B;
+  --ne-warning: #FBBF24;
+  --ne-warning-soft: #78350F;
+  --ne-danger: #F87171;
+  --ne-danger-soft: #7F1D1D;
+
+  /* Dark Overlays */
+  --ne-select: var(--ne-primary);
+  --ne-hover: rgba(96, 165, 250, 0.45);
+  --ne-drop: var(--ne-primary);
+  --ne-locked: var(--ne-warning);
+  --ne-focus-ring: var(--ne-primary);
+}
+
+/* Base utility classes for editor UI */
+.ne-editor-root {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--ne-text);
+  background-color: var(--ne-bg);
+  font-feature-settings: "tnum" 1;
+}
+
+.ne-tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom compact scrollbars */
+.ne-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.ne-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.ne-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--ne-border);
+  border-radius: 4px;
+}
+.ne-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--ne-text-muted);
+}
